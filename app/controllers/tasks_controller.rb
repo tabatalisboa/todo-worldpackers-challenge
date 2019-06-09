@@ -6,6 +6,7 @@ class TasksController < ApplicationController
   end
 
   def show
+    @taks
   end
 
   def new
@@ -37,6 +38,6 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:name, :completed)
+    params.require(:task).permit(:name, :details, :completed)
   end
 end
